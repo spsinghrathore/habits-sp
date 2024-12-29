@@ -1,0 +1,56 @@
+.sheet {
+    position: absolute;
+    width: 15rem;
+    top: 65rem;
+    left:20%;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: var(--clr-dark) 4px 4px 0 0;
+    
+}
+.sheet:hover {
+    transform: scale();
+    box-shadow: var(--clr-dark) 10px 8px 0 0;
+    transition: 0.3s;
+    transform: translate(3px, 3px);
+  
+}
+.about {
+    padding-top: 300px;
+    margin-bottom: 100px;;
+}
+
+/* desktop responsive */
+/* lg */
+@media (min-width: 1024px) {
+    .sheet {
+        width:35rem;
+        top: 2500px;
+        left:20%;
+    
+    }
+    .div1 {
+        width:50%;
+        margin: 5rem;
+    }
+    .div2 {
+        width:50%;
+    }
+    .about {
+        display: flex;
+    }
+    .about_title {
+        font-size: var(--size-5xl);
+    }
+    .about_subtitle {
+        font-size: var(--size-4xl);
+        font-weight: 450;
+    }
+    .btn {
+        font-size: 30px;
+        width: 300px;
+        padding: 10px;
+    }
+  
+
+}
