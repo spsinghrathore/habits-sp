@@ -63,21 +63,10 @@ button {
   color: inherit;
 }
   
-/* the hero section */
-.title,h1,p {
-    text-align: center;
-}
-.title {
-    color: var(--clr-dark);
-    letter-spacing: -1px;
-    line-height: 1;
-}
-p {
-    color: var(--clr-slate800);
-}
 strong {
     color: var(--clr-highlight);
 }
 span {
     text-align:end;
+    font-size: var(--size-6xl);
 }

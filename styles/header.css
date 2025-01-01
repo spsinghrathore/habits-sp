@@ -13,7 +13,7 @@
 
 }
 .title {
-  font-size: var(--size-3xl);
+  font-size: var(--size-7xl);
 }
 p {
   font-size: var(--size-xl);
@@ -21,7 +21,11 @@ p {
   margin: 20px;
 }
 .logo {
-  width: 3rem;
+  width: 4rem;
+}
+.logo_text {
+  font-size: var(--size-5xl);
+  padding: 1rem;
 }
 
 /* xs */

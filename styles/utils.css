@@ -17,6 +17,21 @@
 /* @media (min-width: 1536px) {} */
 
 /* CSS */
+
+/* titles and subtitles */
+.title {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: var(--size-lg);
+  
+}
+.subtitle {
+  text-align: center;
+  font-size: var(--size-4xl);
+  font-weight: 600;
+  color: var(--clr-dark);
+
+}
 .btn {
   background-color: var(--clr-white);
   border: 2px solid var(--clr-dark);
@@ -26,9 +41,9 @@
   cursor: pointer;
   display: inline-block;
   font-weight: 600;
-  font-size: 18px;
-  padding: 0 18px;
-  line-height: 50px;
+  font-size: var(--size-4xl);
+  padding: 0 20px;
+  line-height: 70px;
   text-align: center;
   text-decoration: none;
   user-select: none;
@@ -40,8 +55,8 @@
 }
 
 .arrow {
-  width:25px;
-  height:25px;
+  width:35px;
+  height:35px;
   margin-left: 10px;
   animation: bounce 1s infinite;
 }
@@ -77,6 +92,12 @@
     min-width: 120px;
     padding: 0 25px;
   }
+}
+
+.aside {
+  text-align: end;
+  margin-right: 30%;
+  font-size: var(--size-3xl);
 }
 
   
