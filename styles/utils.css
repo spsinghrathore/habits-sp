@@ -27,23 +27,24 @@
 }
 .subtitle {
   text-align: center;
-  font-size: var(--size-4xl);
-  font-weight: 600;
+  font-size: var(--size-5xl);
+  font-weight: 400;
+  line-height: 1.5;
   color: var(--clr-dark);
 
 }
 .btn {
   background-color: var(--clr-white);
   border: 2px solid var(--clr-dark);
-  border-radius: 30px;
+  border-radius: 50px;
   box-shadow: var(--clr-dark) 4px 4px 0 0;
   color: var(--clr-dark);
   cursor: pointer;
   display: inline-block;
   font-weight: 600;
-  font-size: var(--size-4xl);
+  font-size: var(--size-6xl);
   padding: 0 20px;
-  line-height: 70px;
+  line-height: 100px;
   text-align: center;
   text-decoration: none;
   user-select: none;
@@ -52,6 +53,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding:20px;
 }
 
 .arrow {
