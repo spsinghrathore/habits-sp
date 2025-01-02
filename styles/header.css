@@ -1,24 +1,26 @@
 .navbar {
-  width: 100%;
-    margin-top: 2rem;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     margin-top: 2rem;
+    margin-bottom: 3rem;
     background-color: var(--clr-white);
-    padding: 10px;
+    /* padding: 10px; */
     border-radius: 26px;
     box-shadow:rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px
 
 }
 .title {
-  font-size: var(--size-7xl);
+  margin-top:20px;
+  font-size: var(--size-8xl);
 }
 p {
   font-size: var(--size-xl);
   color: var(--clr-slate800);
   margin: 20px;
+  margin-bottom: 50px;
 }
 .logo {
   width: 4rem;

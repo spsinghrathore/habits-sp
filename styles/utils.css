@@ -130,6 +130,9 @@
     .container {
       max-width: 640px;
     }
+    .title {
+      font-size: var(--size-xl);
+    }
     .section {
       margin-top: 1px;
     }
