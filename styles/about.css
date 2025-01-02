@@ -24,8 +24,8 @@
 /* lg */
 @media (min-width: 1024px) {
     .sheet {
-        width:35rem;
-        top: 2500px;
+        width:30rem;
+        top: 2350px;
         left:20%;
     
     }
@@ -37,6 +37,7 @@
         width:50%;
     }
     .about {
+        padding: 10px;
         display: flex;
     }
     .about_title {

@@ -70,3 +70,10 @@ span {
     text-align:end;
     font-size: var(--size-6xl);
 }
+
+body {
+  scroll-snap-type: y mandatory;
+}
+.container {
+  scroll-snap-align: start;
+}

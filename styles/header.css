@@ -64,7 +64,7 @@ strong {
   text-align:end;
 }
 .navbar {
-  margin-top: 4rem;
+  margin-top: 2rem;
   width:100%;
 }
 .logo_text {
@@ -73,27 +73,6 @@ strong {
 }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
  /* Scrollbar */
 body::-webkit-scrollbar {
