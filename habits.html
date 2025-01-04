@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/mordern-normalize.css">
+  <link rel="stylesheet" href="./styles/style.css">
   <link rel="stylesheet" href="./styles/utils.css">
   <link rel="stylesheet" href="./styles/habits.css">
   <title>Document</title>
@@ -14,27 +15,15 @@
         <img src="./images/icon (2).png" alt="logo" class="logo">
         <h1 class="logo_text">Habits</h1>
    </nav>
-</header>
-
- <form>
-  <input id="task" type="text" placeholder="task">
-  <button type="submit">➕</button>
- </form>
-  <div class="container habit_div">
-    <div class="list">
-      <button class="box1">✔️</button>
-      <h2>One Problem</h2>
-    </div>
-    <div class="list">
-      <button class="box2">✔️</button>
-      <h2>Github Commit</h2>
-    </div>
-    <div class="list">
-      <button class="box3">✔️</button>
-      <h2>one project thing</h2>
-    </div>
-
-    </div>
-  
+  </header>
+  <div class="container" id="habits__card">
+    <div class="feature"><h4>Beej bano Poh!</h4></div>
+    <ul>
+      <li class="todo"><button class="todo_btn">One Problem</button></li>
+      <li class="todo"><button class="todo_btn">Coding Time</button></li>
+      <li class="todo"><button class="todo_btn">Github Commit</button></li>
+    </ul>
+  </div>
+  <script src="./src/habits.js"></script>
 </body>
 </html>

@@ -1,8 +1,14 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .navbar {
-  width: 100%;
+  width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 10px;
     gap: 1rem;
     background-color: var(--clr-white);
     padding: 10px;
@@ -18,7 +24,41 @@
   font-size: var(--size-3xl);
   padding: rem;
 }
-/* sheet styling */
-.list {
-  display: flex;
+/* styling the feature */
+.feature {
+  background-color: var(--clr-rose);
+  color: var(--clr-dark);
+  border-radius: 26px;
+  width: 50%;
+  font-weight: 500;
+}
+
+
+/* styling the card */
+ #habits__card {
+  width: 90%;
+    margin: 20px;
+    text-align: center;
+    gap: 1rem;
+    background-color: var(--clr-white);
+    padding: 10px;
+    border-radius: 26px;
+    box-shadow:rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px
+
+}
+
+.todo {
+  margin: 10px;
+  list-style: circle;
+  font-size: var(--size-4xl);
+
+}
+.todo_btn {
+  border: none;
+  background-color: var(--clr-white);
+  font-size: var(--size-xl);
+  font-weight: 500;
+}
+.todo:hover {
+  font-size: var(--size-5xl);
 }
