@@ -36,6 +36,11 @@
     scroll-behavior: smooth;
  }
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
     font-family: Poppins ,'General Sans', sans-serif;
     background-color: var(--clr-light);
 }

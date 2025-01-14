@@ -1,5 +1,5 @@
 .navbar {
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,11 +23,11 @@ p {
   margin-bottom: 50px;
 }
 .logo {
-  width: 4rem;
+  width: 6rem;
 }
 .logo_text {
-  font-size: var(--size-5xl);
-  padding: 1rem;
+  font-size: var(--size-7xl);
+  padding : 1rem;
 }
 
 /* xs */

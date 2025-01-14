@@ -22,7 +22,6 @@ body {
 }
 .logo_text {
   font-size: var(--size-3xl);
-  padding: rem;
 }
 /* styling the feature */
 .feature {
@@ -53,12 +52,79 @@ body {
   font-size: var(--size-4xl);
 
 }
-.todo_btn {
+.btn {
+  margin-bottom: 20px;
+  padding: 0px 5px;
+  width: 20%px;
+  height: 30px;
+  font-size: var(--size-xs);
+  color: #fff;
+  background: var(--clr-dark);
   border: none;
-  background-color: var(--clr-white);
-  font-size: var(--size-xl);
-  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
 }
 .todo:hover {
   font-size: var(--size-5xl);
+}
+
+/* for progress bar and habits */
+
+.habit-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:fit-content;
+
+}
+
+
+
+input[type="number"] {
+  width: 40px;
+  padding: 1px;
+  font-size: var(--size-sm);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.progress-bar-container {
+  height: 20px;
+  width: 60%;
+  background: #e6e6e6;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid black;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: #28a745;
+  transition: width 0.1s ease-in-out;
+}
+
+.commit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: not-allowed;
+}
+
+.streak h2 {
+  margin-top: 20px;
+  color: #ff5722;
+}
+
+.timer-setting {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2px;
 }
