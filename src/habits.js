@@ -1,71 +1,56 @@
-// DOM Elements
-const startButton = document.getElementById("startTimer");
-const timerInput = document.getElementById("timerInput");
-const progressBar = document.getElementById("progressBar");
-const commitCheckbox = document.getElementById("commitCheckbox");
-const streakCounter = document.getElementById("streakCounter");
+document.addEventListener("DOMContentLoaded", () => {
+  const habits = document.querySelectorAll(".habit-row");
 
-// Variables
-let timerInterval;
-let streak = localStorage.getItem("streak") ? Number(localStorage.getItem("streak")) : 0;
-let lastCompletedDate = localStorage.getItem("lastCompletedDate");
-
-// Initialize Streak
-document.getElementById("streakCounter").textContent = streak;
-
-// Check for Daily Reset
-const today = new Date().toLocaleDateString();
-if (lastCompletedDate && lastCompletedDate !== today) {
-  streak = 0; // Reset streak if missed
-  localStorage.setItem("streak", streak);
-  streakCounter.textContent = streak;
-}
-
-// Start Timer Functionality
-startButton.addEventListener("click", () => {
-  const minutes = parseInt(timerInput.value);
-  if (isNaN(minutes) || minutes <= 0) {
-    alert("Please enter a valid number of minutes!");
-    return;
+  // Initialize habits state from localStorage
+  const today = new Date().toLocaleDateString();
+  const habitState = JSON.parse(localStorage.getItem("habitState")) || {};
+  if (habitState.date !== today) {
+    // Reset progress for a new day
+    habits.forEach((habit) => {
+      const habitId = habit.dataset.habitId;
+      habitState[habitId] = { progress: 0, completed: false };
+    });
+    habitState.date = today;
+    localStorage.setItem("habitState", JSON.stringify(habitState));
   }
 
-  let totalTime = minutes * 60; // Convert to seconds
-  let elapsed = 0;
+  // Restore progress and add functionality
+  habits.forEach((habit) => {
+    const habitId = habit.dataset.habitId;
+    const progressBar = habit.querySelector(".progress-bar");
+    const startBtn = habit.querySelector(".start-btn");
+    const checkbox = habit.querySelector(".habit-checkbox");
 
-  // Reset Progress Bar
-  progressBar.style.width = "0%";
-  commitCheckbox.checked = false;
+    const habitData = habitState[habitId];
 
-  // Start Timer
-  clearInterval(timerInterval);
-  timerInterval = setInterval(() => {
-    elapsed++;
-    const progress = (elapsed / totalTime) * 100;
-    progressBar.style.width = `${progress}%`;
-
-    if (elapsed >= totalTime) {
-      clearInterval(timerInterval);
-      commitCheckbox.checked = true;
-      commitCheckbox.disabled = false;
-      incrementStreak();
+    // Restore progress
+    if (habitData.completed) {
+      progressBar.style.width = "100%";
+      checkbox.checked = true;
+      checkbox.disabled = false;
+      startBtn.disabled = true;
+    } else {
+      progressBar.style.width = `${habitData.progress}%`;
     }
-  }, 1000);
+
+    // Add click event to Start button
+    startBtn.addEventListener("click", () => {
+      let progress = habitData.progress;
+      startBtn.disabled = true;
+      const interval = setInterval(() => {
+        progress += 1;
+        progressBar.style.width = `${progress}%`;
+
+        if (progress >= 100) {
+          clearInterval(interval);
+          checkbox.checked = true;
+          checkbox.disabled = false;
+          habitData.completed = true;
+          habitData.progress = 100;
+          localStorage.setItem("habitState", JSON.stringify(habitState));
+        }
+      }, 100); // Progress bar updates every 100ms
+    });
+  });
 });
 
-// Increment Streak
-function incrementStreak() {
-  streak++;
-  streakCounter.textContent = streak;
-  localStorage.setItem("streak", streak);
-  localStorage.setItem("lastCompletedDate", today);
-}
-
-// Daily Reset
-function resetDaily() {
-  if (new Date().toLocaleDateString() !== today) {
-    streak = 0;
-    streakCounter.textContent = streak;
-    localStorage.setItem("streak", streak);
-    localStorage.setItem("lastCompletedDate", new Date().toLocaleDateString());
-  }
-}

@@ -7,52 +7,46 @@
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="stylesheet" href="./styles/utils.css">
   <link rel="stylesheet" href="./styles/habits.css">
-  <title>Document</title>
+  <title>Habits</title>
 </head>
 <body>
   <header class="container">
     <nav class="navbar">
-        <img src="./images/icon (2).png" alt="logo" class="logo">
-        <h1 class="logo_text">Habits</h1>
-   </nav>
+      <img src="./images/icon (2).png" alt="logo" class="logo">
+      <h1 class="logo_text">Daily Habits Tracker</h1>
+    </nav>
   </header>
-  <div class="container" id="habits__card">
-    <div class="feature"><h4>Beej bano Poh!</h4></div>
-      <div class="habit-header">
-        <button id="startTimer" class="btn">Start Now</button>
+  
+  <main class="container">
+    <!-- Habit Cards -->
+    <div id="habits-container">
+      <div class="habit-row" data-habit-id="1">
+        <h4 class="habit-title">One Problem</h4>
+        <button class="start-btn">Start</button>
         <div class="progress-bar-container">
-          <div id="progressBar"></div>
+          <div class="progress-bar"></div>
         </div>
+        <input type="checkbox" class="habit-checkbox" disabled>
       </div>
-        <div class="timer-setting">
-          <input id="timerInput" type="number" placeholder="Minutes" min="2" value="2" disabled>
-          <img id="editTimer" src="https://img.icons8.com/material-outlined/24/000000/edit--v1.png" alt="Edit Timer">
+      <div class="habit-row" data-habit-id="2">
+        <h4 class="habit-title">Code Time</h4>
+        <button class="start-btn">Start</button>
+        <div class="progress-bar-container">
+          <div class="progress-bar"></div>
         </div>
-        
+        <input type="checkbox" class="habit-checkbox" disabled>
       </div>
-      <div class="commit">
-        <input type="checkbox" id="commitCheckbox" disabled>
-        <label for="commitCheckbox">You Did It!</label>
+      <div class="habit-row" data-habit-id="3">
+        <h4 class="habit-title">Github Commit</h4>
+        <button class="start-btn">Start</button>
+        <div class="progress-bar-container">
+          <div class="progress-bar"></div>
+        </div>
+        <input type="checkbox" class="habit-checkbox" disabled>
       </div>
-      <!--Second-->
-      <div class="container" id="habits__card">
-        <div class="feature"><h4>Beej bano Poh!</h4></div>
-          <div class="habit-header">
-            <button id="startTimer" class="btn">Start Now</button>
-            <div class="progress-bar-container">
-              <div id="progressBar"></div>
-            </div>
-          </div>
-            <div class="timer-setting">
-              <input id="timerInput" type="number" placeholder="Minutes" min="2" value="2" disabled>
-              <img id="editTimer" src="https://img.icons8.com/material-outlined/24/000000/edit--v1.png" alt="Edit Timer">
-            </div>
-            
-          </div>
-          <div class="commit">
-            <input type="checkbox" id="commitCheckbox" disabled>
-            <label for="commitCheckbox">You Did It!</label>
-          </div>
+    </div>
+  </main>
+
   <script src="./src/habits.js"></script>
 </body>
 </html>
