@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
           habitData.progress = 100;
           localStorage.setItem("habitState", JSON.stringify(habitState));
         }
-      }, 100); // Progress bar updates every 100ms
+      }, 3000); // Progress bar updates every 100ms
     });
   });
 });
