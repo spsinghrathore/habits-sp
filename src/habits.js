@@ -41,7 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
         progress += 1;
         progressBar.style.width = `${progress}%`;
 
-        if (progress >= 100) {
+        if (progress >= 100)
+          //
+         {
           clearInterval(interval);
           checkbox.checked = true;
           checkbox.disabled = false;
