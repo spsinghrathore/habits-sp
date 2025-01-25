@@ -1,7 +1,7 @@
 .sheet {
     position: absolute;
     width: 28rem;
-    top: 3400px;
+    top: 3500px;
     left:20%;
     border: 2px solid black;
     border-radius: 10px;
@@ -25,7 +25,7 @@
 @media (min-width: 1024px) {
     .sheet {
         width:30rem;
-        top: 2000px;
+        top: 2400px;
         left:15%;
     
     }
@@ -51,6 +51,7 @@
         font-size: 30px;
         width: 300px;
         padding: 10px;
+        text-decoration: none;
     }
   
 

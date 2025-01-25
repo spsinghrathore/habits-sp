@@ -57,12 +57,14 @@ svg {
 }
 
 button {
+  text-decoration: none;
   display: inline-block;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   padding: 0px;
   border: none;
+  background-color: var(--clr-dark);
   background: none;
   cursor: pointer;
   color: inherit;
